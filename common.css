@@ -1,10 +1,9 @@
-body {
+.wrap {
     background-color: #EAEAEA;
     max-width: 768px;
-}
-
-section {
-    height: 100vh;
+    margin: auto;
+    min-width: 280px;
+    position:relative;
 }
 
 a {
@@ -16,19 +15,14 @@ img {
     height: 100%;
 }
 
-.wrap {
-    margin: auto;
-    min-width: 280px;
-}
-
 /* header 상단 고정 바 start */
 
 header {
     top: 0;
     height: 50px;
+    max-width:768px;
     width: 100%;
     position: fixed;
-    border: 1px solid gray;
     background-color: #eaeaea;
     z-index: 10000;
 }
@@ -38,22 +32,22 @@ header {
     justify-content: space-between;
     align-items: center;
     min-width: 280px;
+    text-align:center;
 }
 
 .hd h1 {
     height: 50px;
     flex: 1;
 }
-
 .hd h1 a {
     display: block;
-    border: 1px solid tomato;
     height: 100%;
 }
 
 .hd>a {
-    border: 1px solid salmon;
-    padding: 8px 0;
+    height:50px;
+    line-height:50px;
+    font-size:1.5rem;
     flex: 1;
 }
 
@@ -88,6 +82,8 @@ header {
     margin-top: 50px;
     position: relative;
     justify-content: center;
+    z-index:10;
+    height:100vh;
 }
 
 .sec1::after {
@@ -95,10 +91,13 @@ header {
     height: 100%;
     content: "";
     background-image: url(./img/sec1bag.jpg);
+    background-repeat:no-repeat;
+    background-position:center;
+    background-size:cover;
     position: absolute;
     top: 0;
     left: 0;
-    z-index: -1000;
+    z-index:20;
     opacity: 0.5;
 }
 
@@ -109,30 +108,43 @@ header {
     height: 55%;
     transform: translatey(20%);
     display: flex;
+    flex-direction:column;
     position: relative;
     justify-content: center;
     align-items: center;
     border-radius: 1rem;
+    z-index:30;
 }
 
 .sec1 .ment .mentimg {
-    position: absolute;
+    /* position: absolute; */
     display: flex;
+    flex-direction:column;
     justify-content: center;
     align-items: center;
-    /* border: 1px solid red; */
     width: 60%;
     bottom: 7%;
 }
 
-
 .sec1 .ment .mentimg a {
     font-weight: bold;
+    display:block;
+    color: white;
+    border-radius: 2rem;
+    background-color: #972E00;
+    text-align: center;
+    width: 60%;
+    padding: 1rem;
+    margin:1.5rem 0;
 }
 
+.boximg {
+    width:360px;
+    height:230px;
+}
+.boximg img {width:100%;}
+
 .sec1 .ment .mentxt {
-    /* border: 1px solid peru; */
-    position: absolute;
     text-align: center;
     width: 80%;
     top: 10%;
@@ -145,17 +157,6 @@ header {
     color: #EF2C2C;
 }
 
-.sec1 .ment a {
-    color: white;
-    border-radius: 2rem;
-    background-color: #972E00;
-    text-align: center;
-    width: 60%;
-    padding: 1rem;
-    position: absolute;
-    top: -30%;
-}
-
 .sec1 .bubble {
     position: absolute;
     /* border: 1px solid black; */
@@ -164,6 +165,7 @@ header {
     bottom: 0;
     display: flex;
     justify-content: space-between;
+    z-index:30;
 }
 
 .sec1 .bubble .bubbleimg {
@@ -544,27 +546,26 @@ header {
     top:0;
     padding:0.4rem;
     font-size:2rem;
-    
 }
 
 .sec5 .revimg {
     display:flex;
     flex-direction:row;
     flex-wrap:wrap;
-    height:90%;
-    width:100%;
+    /* height:90%; */
+    /* width:100%; */
 }
 
-.sec5 div img {
-    height:50%;
+.sec5 .revimg div {
     width:50%;
 }
 
-.sec5 p {
-    bottom:10%;
-}
+.sec5 .revimg div img {width:100%;}
 
 .sec5 a {
+    margin-top:0.5rem;
+    width:100%;
+    text-align:center;
     padding:1rem;
     background-color:white;
     border-radius:2rem;
@@ -603,4 +604,13 @@ header {
     height:30%;
     width:80%;    
 }
+.sns .coupon{
+    display:block;
+    width:614.39px;
+    height:76.8px;
+    line-height:76.8px;
+    text-align:center;
+    background-color:aqua;
+}
 
+footer {text-align:center;}
